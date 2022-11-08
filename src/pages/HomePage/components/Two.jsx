@@ -37,7 +37,6 @@ export default function Two() {
         return newState
       })
     } else {
-      setShows([false, false, false])
     }
   }, [containerHeight, two?.offsetTop])
 

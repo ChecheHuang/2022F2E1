@@ -3,6 +3,9 @@ import Nav from './components/Nav'
 import One from './components/One'
 import Two from './components/Two'
 import Three from './components/Three'
+import Four from './components/Four'
+import Five from './components/Five'
+import Six from './components/Six'
 import { useEffect, useState } from 'react'
 import { useLottie } from 'lottie-react'
 import loadingSVG from './images/魔杖_loading.json'
@@ -28,6 +31,9 @@ function HomePage() {
         <One />
         <Two />
         <Three />
+        <Four />
+        <Five />
+        <Six />
       </div>
     </>
   )
