@@ -1,11 +1,15 @@
 {
   "files": {
-    "main.css": "/2022F2E1/static/css/main.076e7c7a.css",
-    "main.js": "/2022F2E1/static/js/main.ac821792.js",
+    "main.css": "/2022F2E1/static/css/main.64614b95.css",
+    "main.js": "/2022F2E1/static/js/main.ccaafcdf.js",
     "static/media/twoBg.png": "/2022F2E1/static/media/twoBg.367df05eb743916e18e8.png",
     "static/media/bg2.png": "/2022F2E1/static/media/bg2.9e8f8d83617d16d4a6d3.png",
     "static/media/paperDownRight.png": "/2022F2E1/static/media/paperDownRight.622110611ed5b8ca4145.png",
+    "static/media/3.gif": "/2022F2E1/static/media/3.909fe766485ce80286bd.gif",
     "static/media/paperDownLeft.png": "/2022F2E1/static/media/paperDownLeft.0515437119e8be745da6.png",
+    "static/media/2.gif": "/2022F2E1/static/media/2.e2ad89c823981ad5739b.gif",
+    "static/media/4.gif": "/2022F2E1/static/media/4.58b29fa71d39adec2b98.gif",
+    "static/media/1.gif": "/2022F2E1/static/media/1.882348c6cac4483543b0.gif",
     "static/media/paperTop.png": "/2022F2E1/static/media/paperTop.12b8133b412e240cfb0a.png",
     "static/media/twoItemBg.png": "/2022F2E1/static/media/twoItemBg.85b857f23546d331db47.png",
     "static/media/bg1.png": "/2022F2E1/static/media/bg1.bc2fb6628be834230087.png",
@@ -14,16 +18,17 @@
     "static/media/Frame 11.png": "/2022F2E1/static/media/Frame 11.bc56e9f8aa703a389412.png",
     "static/media/oneImg.png": "/2022F2E1/static/media/oneImg.6ae1356be382c4ded442.png",
     "static/media/oneImg2.png": "/2022F2E1/static/media/oneImg2.ab38caaec09c922c3e17.png",
+    "static/media/titleContain.png": "/2022F2E1/static/media/titleContain.8ab055e4e089eef4fc81.png",
     "static/media/twoLogo.png": "/2022F2E1/static/media/twoLogo.8b7a93ab2319934a17ed.png",
     "static/media/twoItem1-3.png": "/2022F2E1/static/media/twoItem1-3.65c3870b72e5bbd83591.png",
     "static/media/twoItem1-2.png": "/2022F2E1/static/media/twoItem1-2.6d7e263edfee3830f2ca.png",
     "static/media/twoItem3.png": "/2022F2E1/static/media/twoItem3.c4219d86bb5c660e1d67.png",
     "index.html": "/2022F2E1/index.html",
-    "main.076e7c7a.css.map": "/2022F2E1/static/css/main.076e7c7a.css.map",
-    "main.ac821792.js.map": "/2022F2E1/static/js/main.ac821792.js.map"
+    "main.64614b95.css.map": "/2022F2E1/static/css/main.64614b95.css.map",
+    "main.ccaafcdf.js.map": "/2022F2E1/static/js/main.ccaafcdf.js.map"
   },
   "entrypoints": [
-    "static/css/main.076e7c7a.css",
-    "static/js/main.ac821792.js"
+    "static/css/main.64614b95.css",
+    "static/js/main.ccaafcdf.js"
   ]
 }
