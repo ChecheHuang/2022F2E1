@@ -1,0 +1,16 @@
+$main: #38241B;
+$active: #951205;
+$starColor: gray;
+
+@mixin title {
+    width: 100%;
+    text-align: center;
+    height: 170;
+    font-family: 'Noto Serif TC';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 170 px;
+    color: #FFFFFF;
+    background: $main;
+}

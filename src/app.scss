@@ -56,22 +56,22 @@ $starColor: gray;
         }
 
         25% {
-            transform: translateY(160px)translateX(4px);
+            transform: translateY(80px)translateX(4px);
             opacity: 0.75;
         }
 
         50% {
-            transform: translateY(320px)translateX(0px);
+            transform: translateY(160px)translateX(0px);
             opacity: 0.5;
         }
 
         75% {
-            transform: translateY(480px)translateX(-4px);
+            transform: translateY(240px)translateX(-4px);
             opacity: 0.25;
         }
 
         100% {
-            transform: translateY(640px)translateX(0px);
+            transform: translateY(320px)translateX(0px);
             opacity: 0;
         }
     }

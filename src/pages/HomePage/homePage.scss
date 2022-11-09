@@ -1,7 +1,4 @@
-$main: #38241B;
-$active: #951205;
-$starColor: gray;
-
+@import '../../mixin.scss';
 
 .loading {
     position: absolute;
@@ -89,14 +86,14 @@ $starColor: gray;
     }
 
     section {
+        padding-top: 61px;
         scroll-snap-align: start;
-        height: calc(100vh - 62px);
+        min-height: calc(100vh - 62px);
     }
 
 
 
     .one {
-        padding: 62px 0;
         height: 180vh;
         background: url('./images/bg2.png');
         background-attachment: fixed;
@@ -385,19 +382,9 @@ $starColor: gray;
 
     .three {
         margin-top: 175px;
-        padding-top: 61px;
 
         h1 {
-            width: 100%;
-            text-align: center;
-            height: 170;
-            font-family: 'Noto Serif TC';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 60px;
-            line-height: 170 px;
-            color: #FFFFFF;
-            background: $main;
+            @include title();
         }
 
         .threeOne {
@@ -491,19 +478,8 @@ $starColor: gray;
     }
 
     .four {
-        padding-top: 61px;
-
         h1 {
-            width: 100%;
-            text-align: center;
-            height: 170;
-            font-family: 'Noto Serif TC';
-            font-style: normal;
-            font-weight: 900;
-            font-size: 60px;
-            line-height: 170 px;
-            color: #FFFFFF;
-            background: $main;
+            @include title();
         }
 
         .imgContainer {
@@ -547,4 +523,170 @@ $starColor: gray;
             color: $main;
         }
     }
+
+    .five {
+        .fiveContainer {
+            padding-top: 100px;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 72px;
+            line-height: 103.46px;
+            position: relative;
+            opacity: 1;
+            transition: 1s;
+
+            &.hide {
+                opacity: 0;
+                position: absolute;
+                z-index: -4;
+            }
+
+            h1 {
+                text-align: center;
+                width: 100%;
+                color: $main;
+            }
+
+            div:last-child {
+                color: $active;
+                display: flex;
+                align-items: center;
+
+                span {
+                    width: 199px;
+                }
+            }
+        }
+
+        .fiveContainer2 {
+            position: relative;
+            transition: 4s;
+            &.hide {
+                opacity: 0;
+                position: absolute;
+                z-index: -4;
+            }
+
+            h1 {
+                @include title();
+            }
+
+            .itemContainer {
+                width: 100%;
+                padding: 0 10vw;
+                margin: auto;
+                margin-top: 63px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+
+                .item {
+                    margin-bottom: 52px;
+                    width: 522px;
+                    height: 738.5px;
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    &:nth-child(odd) {
+                        margin-right: 20px;
+                    }
+
+                    .itemTitle {
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 49px;
+                        line-height: 62px;
+                        color: black;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        height: 160px;
+                        text-align: center;
+                    }
+
+                    img {
+                        position: absolute;
+                        z-index: -1;
+                        top: 0;
+                        left: 0;
+                    }
+
+                    .description {
+                        background: url('./images/titleContain.png');
+                        width: 259px;
+                        height: 66px;
+                        margin-top: 420px;
+                        color: white;
+                        text-align: center;
+                        font-weight: 900;
+                        font-size: 20px;
+                        line-height: 26px;
+                        padding: 7px 0;
+                    }
+
+                    .time {
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 35px;
+                        line-height: 67px;
+                        text-align: center;
+                        color: $main;
+                    }
+
+
+                }
+            }
+
+            footer {
+
+                // width: 100%;
+                .icons {
+                    padding: 0px 15vw;
+                    width: 100%;
+                    background: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .bottom {
+                    background: $main;
+                    padding-top: 60px;
+
+                    h1 {
+                        font-family: 'Noto Serif TC';
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: 60px;
+                        line-height: 86px;
+                        color: #FFFFFF;
+                    }
+
+                    .logos {
+                        width: 100%;
+                        padding: 50px 66px 46px 66px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                    }
+
+                    p {
+                        width: 100%;
+                        text-align: center;
+                        height: 50px;
+                        line-height: 50px;
+                        color: white;
+                    }
+                }
+
+            }
+        }
+    }
+
+    .six {}
 }

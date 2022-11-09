@@ -33,13 +33,6 @@ function App() {
           <Route exact path="/page2" element={<Page2 />} />
         </Routes>
       </HashRouter>
-      <div
-        className="cursor"
-        style={{
-          top: '200px',
-          left: '200px',
-        }}
-      />
       {cursors.map((position, index) => {
         const { x, y, id } = position
         return (
