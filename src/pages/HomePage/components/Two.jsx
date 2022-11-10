@@ -15,9 +15,10 @@ export default function Two() {
   const containerHeight = useHeight('.container')
   const two = document.querySelector('.two')
   const [shows, setShows] = useState([false, false, false])
+  const [windowWidth, setWindowWidth] = useState(0)
   useEffect(() => {
     const diff = two?.offsetTop - containerHeight || 1000000
-    const num = 800
+    const num = windowWidth > 800 ? 800 : 400
     if (diff < num && diff > 0) {
       setShows((prev) => {
         const newState = prev
@@ -28,9 +29,11 @@ export default function Two() {
       setShows((prev) => {
         const newState = prev
         newState[1] = true
+        if (windowWidth < 800) newState[2] = true
         return newState
       })
     } else if (diff < -num && diff > -2 * num) {
+      if (windowWidth < 800) return
       setShows((prev) => {
         const newState = prev
         newState[2] = true
@@ -40,13 +43,17 @@ export default function Two() {
     }
   }, [containerHeight, two?.offsetTop])
 
+  useEffect(() => {
+    setWindowWidth(window.innerWidth)
+  }, [])
+
   const twoItem = [
     {
       title: '視差滾動 Parallax Scrolling',
       logo: twoItem1,
       img: twoItem11,
       h1: 'The F2E 活動網站設計',
-      text: '請參考本屆官網的手頁視差滾動技巧，並請您重新redesign本頁面來設計',
+      text: '請參考本屆官網的首頁視差滾動技巧，並請您重新redesign本頁面來設計',
     },
     {
       title: '線上簽屬 Canvas',
@@ -65,8 +72,12 @@ export default function Two() {
   ]
   return (
     <section className="two">
-      <img className="twoLogo" src={twoLogo} alt="" />
-      <div className="twoText1">年度最強合作，三大關卡來襲</div>
+      <div className="twoTitle">
+        <img className="twoLogo" src={twoLogo} alt="" />
+        <div className="twoText1">
+          年度最強合作<span>，</span>三大關卡來襲
+        </div>
+      </div>
       <div className="underLine"></div>
       {twoItem.map((item, index) => {
         return (

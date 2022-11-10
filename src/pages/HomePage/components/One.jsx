@@ -5,10 +5,19 @@ import paperTop from '../images/paperTop.png'
 import paperDownLeft from '../images/paperDownLeft.png'
 import paperDownRight from '../images/paperDownRight.png'
 import useHeight from '../../../utils/useHeight'
+import slideDown from '../images/scroll_down.json'
+import { useLottie } from 'lottie-react'
+
 export default function One() {
+  const options = {
+    animationData: slideDown,
+    loop: true,
+  }
+  const { View } = useLottie(options)
   const containerHeight = useHeight('.container')
 
   const pageTopStyle = { transform: `translateY(-${containerHeight}px)` }
+  const pageTopStyle2 = { transform: `translateY(-${containerHeight * 20}px)` }
   const pageImg2 = {
     transform: `translateY(-${
       containerHeight < 560 ? containerHeight : 560
@@ -18,20 +27,14 @@ export default function One() {
   return (
     <section
       className="one"
-      style={{ paddingBottom: `${window.innerHeight - 608}px` }}
+      // style={{ paddingBottom: `${window.innerHeight - 608}px` }}
     >
       <div className="oneContainer">
         <div className="title">
           <h1>THE F2E</h1>
           <div>4th</div>
         </div>
-        <div className="text1">
-          前端工程師和介面
-          <br />
-          設計師，攜手合
-          <br />
-          作拿獎金
-        </div>
+        <div className="text1">前端工程師和介面 設計師，攜手合 作拿獎金</div>
         <div className="text2">
           羨慕別人的酷酷網頁動
           <br />
@@ -74,6 +77,9 @@ export default function One() {
           src={paperDownLeft}
           alt=""
         />
+        <div style={pageTopStyle2} className="slideDown">
+          {View}
+        </div>
       </div>
     </section>
   )

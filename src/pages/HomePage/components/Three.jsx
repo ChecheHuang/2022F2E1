@@ -5,53 +5,55 @@ function Three() {
     <section className="three">
       <h1>賽程時間</h1>
       <div className="threeOne">
-        <div className="up">
-          <div className="item active">
-            <div>開始報名</div>
-            <div></div>
-            <div>
-              10/13(四)早上11:00
-              <br />
-              至11/6(日)晚上23:59
+        <div className="timeRoute">
+          <div className="up">
+            <div className="item active">
+              <div>開始報名</div>
+              <div></div>
+              <div>
+                10/13(四)早上11:00
+                <br />
+                至11/6(日)晚上23:59
+              </div>
+            </div>
+            <div className="item">
+              <div>開賽</div>
+              <div></div>
+              <div>
+                UI組、團體組開賽10/31
+                <br />
+                前端組開賽11/7
+              </div>
+            </div>
+            <div className="item">
+              <div>登陸作品</div>
+              <div></div>
+              <div>
+                10/31(一)中午12:00
+                <br />
+                至11/28(一)中午12:00
+              </div>
+            </div>
+            <div className="item">
+              <div>線上直播</div>
+              <div></div>
+              <div>
+                11/3至11/24(每周四)
+                <br />
+              </div>
             </div>
           </div>
-          <div className="item">
-            <div>開賽</div>
-            <div></div>
-            <div>
-              UI組、團體組開賽10/31
-              <br />
-              前端組開賽11/7
+          <div className="down">
+            <div className="item">
+              <div>初選</div>
+              <div></div>
+              <div>12/05(五)</div>
             </div>
-          </div>
-          <div className="item">
-            <div>登陸作品</div>
-            <div></div>
-            <div>
-              10/31(一)中午12:00
-              <br />
-              至11/28(一)中午12:00
+            <div className="item">
+              <div>決選</div>
+              <div></div>
+              <div>12/05(五)</div>
             </div>
-          </div>
-          <div className="item">
-            <div>線上直播</div>
-            <div></div>
-            <div>
-              11/3至11/24(每周四)
-              <br />
-            </div>
-          </div>
-        </div>
-        <div className="down">
-          <div className="item">
-            <div>初選</div>
-            <div></div>
-            <div>12/05(五)</div>
-          </div>
-          <div className="item">
-            <div>決選</div>
-            <div></div>
-            <div>12/05(五)</div>
           </div>
         </div>
         <div className="description">

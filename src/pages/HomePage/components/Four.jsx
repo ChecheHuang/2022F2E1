@@ -24,8 +24,8 @@ function Four() {
         <img className={show ? '' : 'unShow'} src={one} alt="" />
         <img className={show ? '' : 'unShow'} src={two} alt="" />
         <img className={show ? '' : 'unShow'} src={three} alt="" />
+        <div className="fourText">已上皆提供完賽數位獎狀</div>
       </div>
-      <div className="fourText">已上皆提供完賽數位獎狀</div>
     </section>
   )
 }

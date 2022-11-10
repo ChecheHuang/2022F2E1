@@ -10,7 +10,7 @@
 }
 
 .container {
-    scroll-snap-type: y mandatory;
+    scroll-snap-type: y proximity;
     overflow-y: scroll;
     overflow-x: hidden;
     height: 100vh;
@@ -36,6 +36,70 @@
         border-radius: 2em;
     }
 
+    .pp {
+        position: absolute;
+        z-index: 3;
+        opacity: 1;
+        transition: 2s;
+        height: 50px;
+
+
+        &.pp1 {
+            top: 417vh;
+            left: 13vw;
+
+            @include ipad {
+                top: 230vh;
+            }
+        }
+
+        &.pp2 {
+            top: 481vh;
+            left: 69vw;
+
+            @include ipad {
+                top: 403vh;
+                left: 72vw;
+            }
+        }
+
+        &.pp3 {
+            top: 520vh;
+            left: 80vw;
+
+            @include ipad {
+                top: 480vh;
+                left: 80vw;
+            }
+        }
+
+        &.pp4 {
+            top: 586vh;
+            left: 5vw;
+        }
+
+        &.pp5 {
+            top: 815vh;
+            right: 10vw;
+
+            @include ipad {
+                top: 685vh;
+                right: 10vw;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
     nav {
         height: 62px;
         background: $main;
@@ -48,6 +112,11 @@
         top: 0;
         width: 100%;
         z-index: 5;
+
+        @include ipad {
+            padding: 10px 40px;
+        }
+
 
         .imgContainer {
             img {
@@ -77,6 +146,10 @@
                     padding: 6.5px 25px;
                     background: $active;
                     border-radius: 25px;
+
+                    @include ipad() {
+                        padding: 6.5px 51.5px;
+                    }
                 }
             }
 
@@ -102,6 +175,12 @@
         justify-content: center;
         position: relative;
         contain: paint;
+        padding-bottom: 20px;
+
+        @include ipad() {
+            // height: 200vh;
+        }
+
         // z-index: -1;
 
         .oneContainer {
@@ -111,11 +190,24 @@
             height: 597px;
             width: 1213px;
 
+            @include ipad {
+                background: url("./images/bg1Ipad.png");
+                top: 10%;
+                width: 736px;
+                height: 902px;
+            }
+
+
             .title {
                 position: absolute;
                 top: 51px;
                 left: 50px;
                 display: flex;
+
+                @include ipad {
+                    top: 93 px;
+                    left: 39px;
+                }
 
                 h1 {
                     font-size: 80px;
@@ -136,9 +228,12 @@
                     align-items: center;
                     justify-content: center;
                     font-size: 34px;
-                    // font-family: 'Roboto';
                     font-weight: 700;
                     margin-top: 25px;
+
+                    @include ipad {
+                        margin-top: 30px;
+                    }
                 }
             }
 
@@ -151,8 +246,15 @@
                 font-weight: 900;
                 font-size: 42px;
                 line-height: 60px;
-
                 color: $main;
+
+                @include ipad {
+                    left: 39px;
+                    width: 650px;
+                    font-size: 50px;
+                    line-height: 72px;
+                }
+
             }
 
             .text2 {
@@ -165,18 +267,32 @@
                 font-size: 24px;
                 line-height: 35px;
                 color: $main;
+
+                @include ipad {
+                    display: none;
+                }
             }
 
             .oneImg {
                 position: absolute;
                 right: -30px;
                 top: -30px;
+
+                @include ipad {
+                    right: -50px;
+                    top: -40px;
+                    transform: scale(0.8);
+                }
             }
 
             .text3 {
                 position: absolute;
                 right: 61px;
                 top: 215px;
+
+                @include ipad {
+                    display: none;
+                }
 
                 .item {
                     display: flex;
@@ -220,8 +336,11 @@
                 width: 672.27px;
                 height: 562px;
                 left: 308px;
-                // top: 36px;
                 bottom: -562px;
+
+                @include ipad {
+                    left: 35px;
+                }
 
             }
 
@@ -230,7 +349,13 @@
                 width: 1280px;
                 height: 720px;
                 top: -25%;
-                transform: translateY(-100px);
+                left: -2%;
+
+                @include ipad {
+                    top: -5%;
+                    left: -2%;
+
+                }
             }
 
             .paperDownLeft {
@@ -239,6 +364,12 @@
                 height: 1058px;
                 bottom: -100%;
                 left: -20%;
+
+                @include ipad {
+                    bottom: -40%;
+                    left: -90%;
+                    transform: scale(0.7);
+                }
             }
 
             .paperDownRight {
@@ -247,6 +378,20 @@
                 height: 1008px;
                 bottom: -90%;
                 right: -45%;
+
+                @include ipad {
+                    bottom: -20%;
+                    right: -105%;
+                    transform: scale(0.7);
+                }
+            }
+
+            .slideDown {
+                position: absolute;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
             }
         }
     }
@@ -257,19 +402,54 @@
         flex-direction: column;
         align-items: center;
 
-        .twoLogo {
-            margin-top: 100.49px;
+        @include ipad {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
 
-        .twoText1 {
-            margin-top: 42.17px;
-            font-weight: 500;
-            font-size: 43px;
-            line-height: 62px;
-            text-align: center;
-            letter-spacing: 0.6em;
-            color: $main;
+        .twoTitle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 100.49px;
+
+            @include ipad {
+                margin-top: 0;
+                width: 343.03px;
+                height: 552.02px;
+            }
+
+            .twoLogo {
+                width: 100%;
+
+                @include ipad {
+                    width: 80%;
+                }
+            }
+
+            .twoText1 {
+                margin-top: 42.17px;
+                font-weight: 500;
+                font-size: 43px;
+                line-height: 62px;
+                text-align: center;
+                letter-spacing: 0.6em;
+                color: $main;
+
+                @include ipad {
+                    width: 90%;
+                    font-size: 34px;
+                    line-height: 49px;
+
+                    span {
+                        display: none;
+                    }
+                }
+            }
         }
+
 
         .underLine {
             width: 100%;
@@ -279,6 +459,10 @@
             border-bottom: 3px solid $main;
             margin-bottom: 99px;
 
+            @include ipad {
+                display: none;
+            }
+
         }
 
         .twoItem {
@@ -287,6 +471,15 @@
             height: 528px;
             opacity: 1;
             transition: 2s;
+
+            @include ipad {
+                background: url('./images/twoItemBgIpad.png');
+                width: 343.03px;
+                height: 552.02px;
+                position: relative;
+                margin-top: 10px;
+
+            }
 
             &.unShowRight {
                 transform: translateX(200px);
@@ -301,6 +494,10 @@
             &:not(:last-child) {
                 margin-bottom: 42px;
 
+                @include ipad {
+                    margin-bottom: 0;
+                }
+
             }
 
 
@@ -311,22 +508,51 @@
                 width: 100%;
                 padding: 19px 40px 0px 40px;
 
+                @include ipad {
+                    padding: 19px;
+                }
+
                 div:first-child {
                     color: white;
                     font-weight: 700;
                     font-size: 44px;
+
+                    @include ipad {
+                        display: none;
+                    }
+                }
+
+                @include ipad {
+                    justify-content: flex-end;
+
+                    img {
+                        height: 58px;
+                    }
                 }
             }
+
 
             .itemContainer {
                 margin-top: 66px;
                 margin-left: 105.97px;
                 display: flex;
 
+                @include ipad {
+                    margin-top: 30px;
+                    margin-left: 0;
+                    flex-direction: column;
+                    justify-content: center;
+
+                }
+
                 .twoItemImgContainer {
                     margin-right: 86.65px;
                     width: 313.38px;
                     height: 290px;
+
+                    @include ipad {
+                        display: none;
+                    }
 
                     img {
                         width: 100%;
@@ -342,6 +568,13 @@
                         font-weight: 900;
                         line-height: 63px;
                         color: $main;
+
+                        @include ipad {
+                            font-size: 44px;
+                            line-height: 63px;
+                            padding: 0px 40px;
+
+                        }
                     }
 
                     p {
@@ -353,10 +586,28 @@
                         width: 592px;
                         height: 70px;
                         color: $main;
+
+                        @include ipad {
+                            width: 100%;
+                            padding: 0px 35px;
+
+                        }
                     }
 
                     .buttonContainer {
                         margin-top: 80px;
+
+                        @include ipad {
+                            margin-top: 80px;
+                            position: absolute;
+                            bottom: 70px;
+                            left: 50%;
+                            transform: translate(-50%, 0%);
+                            width: 100%;
+                            display: flex;
+                            justify-content: center;
+
+                        }
 
                         button {
                             width: 183px;
@@ -366,6 +617,12 @@
                             font-weight: 350;
                             font-size: 28px;
                             line-height: 41px;
+                            border: 2px solid black;
+
+                            @include ipad {
+                                width: 129px;
+                                height: 52.71px;
+                            }
 
                             &:last-child {
                                 background: $active;
@@ -392,76 +649,112 @@
             display: flex;
             flex-direction: column;
 
-            .up,
-            .down {
-                display: flex;
+            .timeRoute {
                 width: 100%;
-                padding: 0 37px;
-                justify-content: center;
+                display: flex;
+                flex-direction: column;
 
-                &.down {
-                    margin-top: 92px;
+                @include ipad {
+                    overflow-x: scroll;
+                    flex-direction: row;
+                    // width: 200vw;
+
                 }
 
-                .item {
-                    width: 25%;
+                .up,
+                .down {
                     display: flex;
-                    flex-direction: column;
-                    align-items: center;
+                    width: 100%;
+                    padding: 0 37px;
+                    justify-content: center;
 
-                    &:not(:last-child) {
-                        div {
-                            &:nth-child(1) {
-                                position: relative;
+                    @include ipad {
+                        margin-bottom: 150px;
+                    }
 
-                                &:before {
-                                    position: absolute;
-                                    content: "";
-                                    height: 5px;
-                                    width: 23vw;
-                                    background: $main;
-                                    top: 90px;
-                                    left: 50%;
+                    &.up {
+                        @include ipad {
+                            width: 150vw;
+                        }
+                    }
+
+                    &.down {
+                        margin-top: 92px;
+
+                        @include ipad {
+                            margin-top: 0;
+                        }
+                    }
+
+                    .item {
+                        width: 25%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+
+                        @include ipad {
+                            width: 300px;
+                        }
+
+                        &:not(:last-child) {
+                            div {
+                                &:nth-child(1) {
+                                    position: relative;
+
+                                    &:before {
+                                        position: absolute;
+                                        content: "";
+                                        height: 5px;
+                                        width: 23vw;
+                                        background: $main;
+                                        top: 90px;
+                                        left: 50%;
+
+                                        @include ipad {
+                                            width: 35vw;
+                                        }
+                                    }
                                 }
                             }
                         }
-                    }
 
-                    div {
-                        &:first-child {
-                            font-size: 30px;
-                            line-height: 43px;
-                            color: $main;
-                        }
-
-                        &:nth-child(2) {
-                            width: 48.53px;
-                            height: 48.53px;
-                            background: $main;
-                            transform: rotate(45deg);
-                            margin: 25px 0;
-                        }
-
-                        &:nth-child(3) {
-                            font-size: 24px;
-                            line-height: 35px;
-                            height: 82px;
-                            display: flex;
-                            align-items: center;
-                            color: $main;
-                        }
-                    }
-
-                    &.active {
                         div {
-                            &:nth-child(2) {
-                                background: $active;
+                            &:first-child {
+                                font-size: 30px;
+                                line-height: 43px;
+                                color: $main;
+                            }
 
+                            &:nth-child(2) {
+                                width: 48.53px;
+                                height: 48.53px;
+                                background: $main;
+                                transform: rotate(45deg);
+                                margin: 25px 0;
+                            }
+
+                            &:nth-child(3) {
+                                font-size: 24px;
+                                line-height: 35px;
+                                height: 82px;
+                                display: flex;
+                                align-items: center;
+                                color: $main;
                             }
                         }
-                    }
 
+                        &.active {
+                            div {
+                                &:nth-child(2) {
+                                    background: $active;
+
+                                }
+                            }
+                        }
+
+                    }
                 }
+
             }
 
             .description {
@@ -488,24 +781,42 @@
             align-items: center;
             justify-content: center;
             padding: 41px 92px;
+            flex-wrap: wrap;
+
+            @include ipad {
+                padding: 41px 0px;
+            }
 
             img {
                 opacity: 1;
 
                 &:first-child {
                     transition: 0.5s;
+
+                    @include ipad {
+                        width: 50%;
+                    }
                 }
 
                 &:nth-child(2) {
                     transition: 1s;
+
+                    @include ipad {
+                        width: 50%;
+                    }
+
                 }
 
                 &:nth-child(3) {
                     transition: 1.5s;
+
+                    @include ipad {
+                        width: 50%;
+                    }
                 }
 
                 &:not(:last-child) {
-                    margin-right: 20px;
+                    // margin-right: 20px;
                 }
 
                 &.unShow {
@@ -513,15 +824,23 @@
                     transform: translateY(-200px);
                 }
             }
+
+            .fourText {
+                margin-top: 103.97px;
+                font-size: 36px;
+                width: 100%;
+                text-align: center;
+                color: $main;
+
+                @include ipad {
+                    margin-top: 0px;
+                    width: 50%;
+                    padding: 0 50px;
+                }
+            }
         }
 
-        .fourText {
-            margin-top: 103.97px;
-            font-size: 36px;
-            width: 100%;
-            text-align: center;
-            color: $main;
-        }
+
     }
 
     .five {
@@ -544,6 +863,7 @@
             }
 
             h1 {
+                font-family: 'Noto Serif TC';
                 text-align: center;
                 width: 100%;
                 color: $main;
@@ -563,6 +883,7 @@
         .fiveContainer2 {
             position: relative;
             transition: 4s;
+
             &.hide {
                 opacity: 0;
                 position: absolute;
@@ -582,6 +903,11 @@
                 flex-wrap: wrap;
                 justify-content: center;
 
+                @include ipad {
+                    padding: 0;
+
+                }
+
                 .item {
                     margin-bottom: 52px;
                     width: 522px;
@@ -591,11 +917,19 @@
                     flex-direction: column;
                     align-items: center;
 
+                    @include ipad {
+                        width: 343px;
+                        height: 485.26px;
+                    }
+
                     &:nth-child(odd) {
                         margin-right: 20px;
+
+                      
                     }
 
                     .itemTitle {
+                        font-family: 'Noto Serif TC';
                         font-style: normal;
                         font-weight: 900;
                         font-size: 49px;
@@ -606,9 +940,20 @@
                         align-items: center;
                         height: 160px;
                         text-align: center;
+
+                        @include ipad {
+                            margin-top: 0px;
+                            width: 100%;
+                            min-height: 70px;
+                            font-size: 33px;
+                            line-height: 36px;
+                        }
                     }
 
                     img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                         position: absolute;
                         z-index: -1;
                         top: 0;
@@ -626,6 +971,15 @@
                         font-size: 20px;
                         line-height: 26px;
                         padding: 7px 0;
+
+                        @include ipad {
+                            width: 170.19;
+                            height: 43.37px;
+                            margin-top: 260px;
+                            font-size: 13px;
+                            line-height: 16px;
+
+                        }
                     }
 
                     .time {
@@ -635,6 +989,11 @@
                         line-height: 67px;
                         text-align: center;
                         color: $main;
+
+                        @include ipad {
+                            font-size: 24px;
+                            line-height: 67px;
+                        }
                     }
 
 
@@ -651,6 +1010,7 @@
                     display: flex;
                     align-items: center;
                     justify-content: space-between;
+                    flex-wrap: wrap;
                 }
 
                 .bottom {
@@ -672,6 +1032,15 @@
                         display: flex;
                         align-items: center;
                         justify-content: space-between;
+                        @include ipad{
+                            flex-direction: column;
+                           
+                        }
+                        img{
+                            @include ipad{
+                                margin-bottom: 60px;
+                            }
+                        }
 
                     }
 

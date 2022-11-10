@@ -14,3 +14,15 @@ $starColor: gray;
     color: #FFFFFF;
     background: $main;
 }
+
+@mixin ipad {
+    @media (max-width:768px) {
+        @content
+    }
+}
+
+@mixin iphone {
+    @media (max-width:568px) {
+        @content
+    }
+}

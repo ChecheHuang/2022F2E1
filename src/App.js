@@ -14,7 +14,7 @@ function App() {
       setCursors((prev) => {
         const newState = [
           ...prev,
-          { id: uuidv4(), x: mousePos.x + 18, y: mousePos.y + 10 },
+          { id: uuidv4(), x: mousePos.x - 4, y: mousePos.y },
         ]
         if (newState.length > 5) newState.shift()
         return newState
