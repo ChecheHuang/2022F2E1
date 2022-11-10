@@ -15,12 +15,17 @@ export default function One() {
   }
   const { View } = useLottie(options)
   const containerHeight = useHeight('.container')
-
   const pageTopStyle = { transform: `translateY(-${containerHeight}px)` }
   const pageTopStyle2 = { transform: `translateY(-${containerHeight * 20}px)` }
   const pageImg2 = {
     transform: `translateY(-${
-      containerHeight < 560 ? containerHeight : 560
+      window.innerWidth > 400
+        ? containerHeight < 560
+          ? containerHeight
+          : 560
+        : containerHeight < 940
+        ? containerHeight
+        : 940
     }px)`,
   }
   const pageBottomStyle = { transform: `translateY(${containerHeight}px)` }
@@ -36,11 +41,7 @@ export default function One() {
         </div>
         <div className="text1">前端工程師和介面 設計師，攜手合 作拿獎金</div>
         <div className="text2">
-          羨慕別人的酷酷網頁動
-          <br />
-          畫?滿足不了同事的許
-          <br />
-          願?動畫技能樹太雜無從下手?
+          羨慕別人的酷酷網頁動畫?滿足不了同事的許願?動畫技能樹太雜無從下手?
         </div>
         <img className="oneImg" src={oneImg} alt="" />
         <div className="text3">
@@ -63,23 +64,23 @@ export default function One() {
             </div>
           </div>
         </div>
-        <img style={pageImg2} className="oneImg2" src={oneImg2} alt="" />
-        <img
+        <div style={pageImg2} className="oneImg2"></div>
+        {/* <img
           style={pageBottomStyle}
           className="paperDownRight"
           src={paperDownRight}
           alt=""
-        />
-        <img style={pageTopStyle} className="paperTop" src={paperTop} alt="" />
-        <img
+        /> */}
+        {/* <img style={pageTopStyle} className="paperTop" src={paperTop} alt="" /> */}
+        {/* <img
           style={pageBottomStyle}
           className="paperDownLeft"
           src={paperDownLeft}
           alt=""
-        />
-        <div style={pageTopStyle2} className="slideDown">
+        /> */}
+        {/* <div style={pageTopStyle2} className="slideDown">
           {View}
-        </div>
+        </div> */}
       </div>
     </section>
   )
