@@ -95,9 +95,9 @@ function HomePage() {
         <Nav />
         <One />
         <Two />
-        {/* <Three /> */}
-        {/* <Four /> */}
-        {/* <Five /> */}
+        <Three />
+        <Four />
+        <Five />
       </div>
     </>
   )

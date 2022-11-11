@@ -1,9 +1,5 @@
 import React from 'react'
 import oneImg from '../images/oneImg.png'
-import oneImg2 from '../images/oneImg2.png'
-import paperTop from '../images/paperTop.png'
-import paperDownLeft from '../images/paperDownLeft.png'
-import paperDownRight from '../images/paperDownRight.png'
 import useHeight from '../../../utils/useHeight'
 import slideDown from '../images/scroll_down.json'
 import { useLottie } from 'lottie-react'
@@ -65,22 +61,13 @@ export default function One() {
           </div>
         </div>
         <div style={pageImg2} className="oneImg2"></div>
-        {/* <img
-          style={pageBottomStyle}
-          className="paperDownRight"
-          src={paperDownRight}
-          alt=""
-        /> */}
-        {/* <img style={pageTopStyle} className="paperTop" src={paperTop} alt="" /> */}
-        {/* <img
-          style={pageBottomStyle}
-          className="paperDownLeft"
-          src={paperDownLeft}
-          alt=""
-        /> */}
-        {/* <div style={pageTopStyle2} className="slideDown">
+        <div style={pageBottomStyle} className="paperDownRight"></div>
+        <div style={pageTopStyle} className="paperTop"></div>
+        <div style={pageBottomStyle} className="paperDownLeft"></div>
+
+        <div style={pageTopStyle2} className="slideDown">
           {View}
-        </div> */}
+        </div>
       </div>
     </section>
   )
