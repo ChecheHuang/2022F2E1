@@ -8,22 +8,22 @@ import Page2 from './pages/Page2/Page2'
 function App() {
   const mousePos = useMouse()
   const [cursors, setCursors] = useState([{ x: 500, y: 500 }])
-  // useEffect(() => {
-  //   const addStar = setInterval(() => {
-  //     if (mousePos.x === 0 || mousePos.y === 0 || !uuidv4()) return
-  //     setCursors((prev) => {
-  //       const newState = [
-  //         ...prev,
-  //         { id: uuidv4(), x: mousePos.x - 4, y: mousePos.y },
-  //       ]
-  //       if (newState.length > 5) newState.shift()
-  //       return newState
-  //     })
-  //   }, 400)
+  useEffect(() => {
+    const addStar = setInterval(() => {
+      if (mousePos.x === 0 || mousePos.y === 0 || !uuidv4()) return
+      setCursors((prev) => {
+        const newState = [
+          ...prev,
+          { id: uuidv4(), x: mousePos.x - 4, y: mousePos.y },
+        ]
+        if (newState.length > 5) newState.shift()
+        return newState
+      })
+    }, 400)
 
-  //   return () => clearInterval(addStar)
-  //   // eslint-disable-next-line react-hooks/exhaustive-deps
-  // }, [])
+    return () => clearInterval(addStar)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   return (
     <>
