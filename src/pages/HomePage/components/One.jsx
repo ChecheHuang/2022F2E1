@@ -15,13 +15,13 @@ export default function One() {
   const pageTopStyle2 = { transform: `translateY(-${containerHeight * 20}px)` }
   const pageImg2 = {
     transform: `translateY(-${
-      window.innerWidth > 400
+      window.innerWidth > 500
         ? containerHeight < 560
           ? containerHeight
           : 560
-        : containerHeight < 940
+        : containerHeight < 960
         ? containerHeight
-        : 940
+        : 960
     }px)`,
   }
   const pageBottomStyle = { transform: `translateY(${containerHeight}px)` }

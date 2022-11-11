@@ -75,7 +75,7 @@ function HomePage() {
       <div className="container">
         <Modal open={openModal} setOpenModal={setOpenModal} />
 
-        {pp.map((item, index) => {
+        {/* {pp.map((item, index) => {
           const { className, img, isClick } = item
           return (
             <div
@@ -90,7 +90,7 @@ function HomePage() {
               {!isClick && <img src={img} alt="" />}
             </div>
           )
-        })}
+        })} */}
 
         <Nav />
         <One />

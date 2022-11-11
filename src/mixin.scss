@@ -26,3 +26,8 @@ $starColor: gray;
         @content
     }
 }
+@mixin min {
+    @media (max-width:376px) {
+        @content
+    }
+}
