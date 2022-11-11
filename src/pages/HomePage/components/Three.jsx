@@ -1,8 +1,18 @@
 import React from 'react'
-
-function Three() {
+import pp2 from '../images/pp2.png'
+function Three({ pp, setPP }) {
   return (
     <section className="three">
+      {!pp && (
+        <img
+          onClick={() => {
+            setPP(1)
+          }}
+          className="pp2"
+          src={pp2}
+          alt=""
+        />
+      )}
       <h1>賽程時間</h1>
       <div className="threeOne">
         <div className="timeRoute">

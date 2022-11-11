@@ -12,8 +12,10 @@ import icon4 from '../images/icon4.png'
 import twoItem1 from '../images/twoItem1.png'
 import twoItem2 from '../images/twoItem2.png'
 import twoItem3 from '../images/twoItem3.png'
+import pp4 from '../images/pp4.png'
+import pp5 from '../images/pp5.png'
 
-function Five() {
+function Five({ pp, last, setPP }) {
   const [show, setShow] = useState(false)
   const options = {
     animationData: loadingSVG,
@@ -22,6 +24,27 @@ function Five() {
   const { View } = useLottie(options)
   return (
     <section className="five">
+      {!pp && (
+        <img
+          onClick={() => {
+            setPP(3)
+          }}
+          className="pp4"
+          src={pp4}
+          alt=""
+        />
+      )}
+      {!last && (
+        <img
+          onClick={() => {
+            setPP(4)
+          }}
+          className="pp5"
+          src={pp5}
+          alt=""
+        />
+      )}
+
       <div className={show ? 'fiveContainer hide' : 'fiveContainer '}>
         <h1>意想不到的好康</h1>
         <div>

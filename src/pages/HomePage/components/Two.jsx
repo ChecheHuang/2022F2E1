@@ -8,10 +8,11 @@ import twoItem12 from '../images/twoItem1-2.png'
 import twoItem13 from '../images/twoItem1-3.png'
 
 import useHeight from '../../../utils/useHeight'
+import pp1 from '../images/pp1.png'
 
 import { useEffect } from 'react'
 
-export default function Two() {
+export default function Two({ pp, setPP }) {
   const containerHeight = useHeight('.container')
   const two = document.querySelector('.two')
   const [shows, setShows] = useState([false, false, false])
@@ -72,6 +73,16 @@ export default function Two() {
   ]
   return (
     <section className="two">
+      {!pp && (
+        <img
+          onClick={() => {
+            setPP(0)
+          }}
+          className="pp1"
+          src={pp1}
+          alt=""
+        />
+      )}
       <div className="twoTitle">
         <img className="twoLogo" src={twoLogo} alt="" />
         <div className="twoText1">
