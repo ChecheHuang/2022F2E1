@@ -39,7 +39,6 @@ export default function One() {
         <div className="text2">
           羨慕別人的酷酷網頁動畫?滿足不了同事的許願?動畫技能樹太雜無從下手?
         </div>
-        <img className="oneImg" src={oneImg} alt="" />
         <div className="text3">
           <div className="item">
             <div>報名總人數</div>
@@ -60,7 +59,9 @@ export default function One() {
             </div>
           </div>
         </div>
+
         <div style={pageImg2} className="oneImg2"></div>
+        <img className="oneImg" src={oneImg} alt="" />
         <div style={pageBottomStyle} className="paperDownRight"></div>
         <div style={pageTopStyle} className="paperTop"></div>
         <div style={pageBottomStyle} className="paperDownLeft"></div>
