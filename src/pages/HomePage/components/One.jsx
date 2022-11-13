@@ -2,15 +2,16 @@ import React from 'react'
 import oneImg from '../images/oneImg.png'
 import useHeight from '../../../utils/useHeight'
 import slideDown from '../images/scroll_down.json'
+import swipeUp from '../images/swipe_up.json'
 import { useLottie } from 'lottie-react'
 
 export default function One() {
+  const containerHeight = useHeight('.container')
   const options = {
-    animationData: slideDown,
+    animationData: window.innerWidth > 500 ? slideDown : swipeUp,
     loop: true,
   }
   const { View } = useLottie(options)
-  const containerHeight = useHeight('.container')
   const pageTopStyle = { transform: `translateY(-${containerHeight}px)` }
   const pageTopStyle2 = { transform: `translateY(-${containerHeight * 20}px)` }
   const pageImg2 = {
